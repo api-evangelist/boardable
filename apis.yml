@@ -1,0 +1,47 @@
+aid: boardable
+url: https://raw.githubusercontent.com/api-evangelist/boardable/refs/heads/main/apis.yml
+name: Boardable
+kind: company
+description: >-
+  Boardable is board management software for nonprofits, associations,
+  foundations, and other mission-driven organizations, covering meeting
+  scheduling, agenda building, a document center, minutes and AI-generated
+  meeting summaries, e-voting, task assignments, groups/committees, member
+  directories, and built-in video conferencing. As of this review Boardable
+  does NOT publish a documented public developer API: there is no developer
+  portal, no published API reference, no OpenAPI, no self-serve API keys, and
+  no documented webhooks. A private, authentication-gated backend API exists at
+  https://api.boardable.com (for example, GET https://api.boardable.com/accounts
+  returns HTTP 401 Unauthorized) that powers the Boardable web and mobile apps,
+  but it is undocumented and not offered as a public/partner integration
+  surface. Third-party listings occasionally describe Boardable as having an
+  "open API," but Boardable provides no public developer documentation to
+  substantiate that. Integrations are delivered through pre-built connectors
+  (Salesforce, Microsoft 365 / Teams / Outlook / SharePoint / OneDrive, Google
+  Drive & Calendar, Zoom, Dropbox, LinkedIn) rather than a documented API. This
+  entry is therefore an honest stub: no APIs are listed because none are
+  publicly documented.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Board Management
+- Governance
+- Nonprofit
+- Meetings
+- Board Portal
+- Collaboration
+- No Public API
+created: '2026-07-05'
+modified: '2026-07-05'
+specificationVersion: '0.19'
+common:
+- type: Website
+  url: https://boardable.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/boardable
+- type: Documentation
+  url: https://docs.boardable.com/knowledge/getting-started-with-boardable
+- type: Plans
+  url: plans/boardable-plans-pricing.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

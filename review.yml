@@ -1,0 +1,102 @@
+aid: boardable
+name: Boardable
+review:
+  question: Does Boardable expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-05'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Boardable does not publish any
+    documented public API - REST, SSE, or WebSocket. There is no developer
+    portal, API reference, or protocol surface to model. A private,
+    auth-gated backend exists at https://api.boardable.com but it is
+    undocumented and out of scope; no server-push (WebSocket or SSE)
+    transport is documented anywhere on Boardable's public properties.
+findings:
+  summary: |
+    Boardable does not publish a documented public WebSocket API - and, more
+    broadly, does not publish a documented public developer API of any kind
+    as of the review date. Boardable is board management software for
+    nonprofits and mission-driven organizations (meetings, agendas, document
+    center, minutes/AI summaries, e-voting, tasks, groups, member directory,
+    and built-in video). There is no developer portal (developers.boardable.com
+    and developer.boardable.com both redirect to the marketing homepage), no
+    published API reference, no OpenAPI definition, no self-serve API keys,
+    and no documented webhooks. A private, authentication-gated backend API is
+    observable at https://api.boardable.com (for example, GET
+    https://api.boardable.com/accounts returns HTTP 401 Unauthorized) that
+    serves the Boardable web and mobile applications, but it is undocumented
+    and is not offered as a public or partner integration surface. Some
+    third-party directory listings describe Boardable as offering an "open
+    API," but Boardable itself publishes no developer documentation to
+    substantiate that claim. Consequently no WebSocket (ws:// or wss://)
+    endpoint - and no documented REST endpoint - could be confirmed.
+  openSource: |
+    Boardable is a proprietary, closed-source SaaS product. No open-source
+    components or self-hosting option are published. Boardable complies with
+    SOC 2 Type II, GDPR, and HIPAA per its marketing materials.
+  transports:
+    - protocol: REST
+      scheme: https
+      baseURL: https://api.boardable.com
+      documented: false
+      note: >-
+        A private backend API exists (GET https://api.boardable.com/accounts
+        returns HTTP 401 Unauthorized) and powers the Boardable apps, but it is
+        undocumented, requires app authentication, and is not published as a
+        public/partner developer API.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented on any Boardable public property as of the review date.
+    - protocol: SSE
+      scheme: https
+      documented: false
+      note: No Server-Sent Events / streaming transport is documented as of the review date.
+  endpointsConfirmedRest: []
+  endpointsModeled: none
+  integrations:
+    note: >-
+      Boardable connects to third parties via pre-built connectors, not a
+      documented public API.
+    connectors:
+      - Salesforce
+      - Microsoft 365
+      - Microsoft Teams
+      - Outlook
+      - SharePoint
+      - OneDrive
+      - Google Drive
+      - Google Calendar
+      - Zoom
+      - Dropbox
+      - LinkedIn
+      - YouTube
+sources:
+  - url: https://boardable.com/
+    type: Website
+    note: Product marketing homepage; describes board management features. No developer/API link.
+  - url: https://boardable.com/features/integrations/
+    type: ProductPage
+    note: Lists pre-built connectors (Salesforce, Microsoft, Google, Zoom, Dropbox, etc.). No public API, API keys, webhooks, or Zapier documented.
+  - url: https://docs.boardable.com/knowledge/getting-started-with-boardable
+    type: Documentation
+    note: End-user help center. No developer/API documentation.
+  - url: https://boardable.com/plans/
+    type: Pricing
+    note: Essentials / Professional / Professional+ per-user plans plus custom Enterprise. No API or SSO add-on documented in pricing.
+  - url: https://api.boardable.com/accounts
+    type: PrivateBackend
+    note: Returns HTTP 401 Unauthorized - undocumented, auth-gated backend that serves the Boardable apps; not a public developer API.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    Boardable exposes no documented public API surface (REST, SSE, or
+    WebSocket). The only observable API is a private, auth-gated backend at
+    https://api.boardable.com that is undocumented and not offered for public
+    integration. No AsyncAPI or OpenAPI document was created because there is
+    no documented protocol surface to model. The apis.yml is an honest stub:
+    it lists Website, LinkedIn, Documentation (end-user help center), and Plans
+    common properties, and intentionally lists no APIs.

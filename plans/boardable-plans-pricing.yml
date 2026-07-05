@@ -1,0 +1,129 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Boardable
+providerId: boardable
+created: '2026-07-05'
+modified: '2026-07-05'
+reconciled: false
+tags:
+- Board Management
+- Governance
+- Nonprofit
+- Board Portal
+- Plans
+description: >-
+  Boardable is priced per user, per month, billed annually (annual billing is
+  advertised at roughly 10% savings versus monthly), across three published
+  tiers plus a custom Enterprise quote. Pricing is for the board management SaaS
+  product itself; Boardable does not publish or price a public developer API, and
+  no API or SSO add-on is listed on the pricing page. Prices below reflect the
+  Boardable plans page and third-party listings at the time of review and are
+  unreconciled - verify current rates and limits directly with Boardable.
+notes: >-
+  There is no API tier because Boardable exposes no documented public developer
+  API. A 14-day free trial of Professional-level features is offered with no
+  credit card required. Volume discounts are available for larger organizations.
+sources:
+- https://boardable.com/plans/
+- https://boardable.com/
+plans:
+- id: boardable-essentials
+  name: Essentials
+  type: paid
+  description: >-
+    Entry tier with core board management: document center, agenda builder,
+    meeting scheduler, board packet generation, and Google Drive & Microsoft
+    Teams integration. Limits include 1,000 files, 5 guests per meeting, and 10
+    groups.
+  entries:
+  - label: Per User Subscription
+    name: essentials_per_user
+    type: subscription
+    metric: users
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 20.99
+    currency: USD
+    userMultiplied: true
+  elements:
+  - name: Document Center
+  - name: Agenda Builder
+  - name: Meeting Scheduler
+  - name: Board Packet Generation
+  - name: Google Drive & Microsoft Teams Integration
+- id: boardable-professional
+  name: Professional
+  type: paid
+  description: >-
+    Most-popular tier. Everything in Essentials plus custom data fields,
+    governance forms, eSignatures, and public sites, with unlimited files, 10
+    guests per meeting, and 25 groups. Includes 4 survey sends and 400 survey
+    responses per month.
+  entries:
+  - label: Per User Subscription
+    name: professional_per_user
+    type: subscription
+    metric: users
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 29.99
+    currency: USD
+    userMultiplied: true
+  elements:
+  - name: Everything in Essentials
+  - name: Custom Data Fields
+  - name: Governance Forms
+  - name: eSignatures
+  - name: Public Sites
+  - name: Unlimited Files
+- id: boardable-professional-plus
+  name: Professional+
+  type: paid
+  description: >-
+    Top published tier. Everything in Professional plus AI Meeting Minutes &
+    Transcripts, unlimited surveys, and Boardable Video included, with unlimited
+    files, guests, and groups.
+  entries:
+  - label: Per User Subscription
+    name: professional_plus_per_user
+    type: subscription
+    metric: users
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 35.99
+    currency: USD
+    userMultiplied: true
+  elements:
+  - name: Everything in Professional
+  - name: AI Meeting Minutes & Transcripts
+  - name: Boardable Video Included
+  - name: Unlimited Surveys
+  - name: Unlimited Files, Guests, and Groups
+- id: boardable-enterprise
+  name: Enterprise
+  type: custom
+  description: >-
+    Custom-quoted tier for larger organizations, with volume discounts and a
+    tailored feature set arranged through Boardable sales.
+  entries:
+  - label: Custom Quote
+    name: enterprise_custom
+    type: subscription
+    metric: users
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: true
+  elements:
+  - name: Everything in Professional+
+  - name: Volume Discounts
+  - name: Custom Terms
