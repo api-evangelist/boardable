@@ -21,7 +21,19 @@ description: >-
   Drive & Calendar, Zoom, Dropbox, LinkedIn) rather than a documented API. This
   entry is therefore an honest stub: no APIs are listed because none are
   publicly documented.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/boardable.png
 tags:
 - Board Management
 - Governance
