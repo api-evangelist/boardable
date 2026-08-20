@@ -37,6 +37,14 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/boardable.
 tags:
 - Board Management
 - Governance
+- Non-Profit
+- Meetings
+- Board Portal
+- Collaboration
+- No Public API
+tags_raw:
+- Board Management
+- Governance
 - Nonprofit
 - Meetings
 - Board Portal
