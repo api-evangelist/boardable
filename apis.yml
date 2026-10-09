@@ -38,6 +38,9 @@ accessModel:
   trial: false
   try_now: false
   public: false
+  gated: private
+  gated_source:
+  - tag:No Public API
   label: Paid
   confidence: medium
   source:
@@ -52,7 +55,6 @@ tags:
 - Meetings
 - Board Portal
 - Collaboration
-- No Public API
 tags_raw:
 - Board Management
 - Governance
@@ -60,7 +62,6 @@ tags_raw:
 - Meetings
 - Board Portal
 - Collaboration
-- No Public API
 created: '2026-07-05'
 modified: '2026-10-06'
 specificationVersion: '0.23'
@@ -84,3 +85,5 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-tags-removed:
+- No Public API
