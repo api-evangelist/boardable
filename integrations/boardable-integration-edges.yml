@@ -1,0 +1,34 @@
+generated: '2026-10-14'
+method: searched
+checked:
+- https://mpl-pusa01.app.blackbaud.net/mktpl/v1/public/marketplace/applications
+source:
+- https://mpl-pusa01.app.blackbaud.net/mktpl/v1/public/marketplace/applications
+marketplace_apps: []
+edges:
+- partner_name: Blackbaud (Blackbaud Marketplace)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  partner_note: Blackbaud has no all/* repo (catalog gap); publisher side only
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: blackbaud-marketplace
+  evidence: https://app.blackbaud.com/marketplace/applications/cabcc9dc-c681-4eff-8827-74c671296c87
+  store: https://app.blackbaud.com/marketplace
+  store_api: https://mpl-pusa01.app.blackbaud.net/mktpl/v1/public/marketplace/applications
+  publisher: Boardable
+  publisher_match: domain
+  publisher_domain: boardable.com
+  apps:
+  - Boardable
+  listing_count: 1
+  compatible_solutions:
+  - bbcrm
+  - renxt
+  badges:
+  - Reviewed by Blackbaud
+  detected_by: sweep-nonprofit.py
+  detected: '2026-10-14'
