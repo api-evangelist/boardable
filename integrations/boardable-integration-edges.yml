@@ -3,6 +3,7 @@ method: searched
 checked:
 - blackbaud/integrations/blackbaud-integration-edges.yml
 - https://mpl-pusa01.app.blackbaud.net/mktpl/v1/public/marketplace/applications
+- zoom/integrations/zoom-integration-edges.yml
 source:
 - https://mpl-pusa01.app.blackbaud.net/mktpl/v1/public/marketplace/applications
 marketplace_apps: []
@@ -25,3 +26,20 @@ edges:
   detected_by: mirror-platform-listings.py
   badges:
   - Reviewed by Blackbaud
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/BhjsJPuuQuCbFYUggzEsnw
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - Boardable
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
